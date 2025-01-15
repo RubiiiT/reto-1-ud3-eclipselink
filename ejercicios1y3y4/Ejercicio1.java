@@ -15,8 +15,8 @@ public class Ejercicio1 {
             et = em.getTransaction();
             et.begin();
 
-            Alumno alumno = new Alumno(idAlumno, NIF, nombre, apellido1, apellido2, email, direccion, codigoPostal, municipio, provincia, beca);
-
+            //Alumno alumno = new Alumno(idAlumno, NIF, nombre, apellido1, apellido2, email, direccion, codigoPostal, municipio, provincia, beca);
+            Alumno alumno = new Alumno();
             em.persist(alumno);
             et.commit();
         } catch (Exception e) {

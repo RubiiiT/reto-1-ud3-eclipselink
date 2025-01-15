@@ -24,7 +24,7 @@ public class Profesor {
     public Profesor(String idProfesor, String nombre) {
         this.idProfesor = idProfesor;
         this.nombre = nombre;
-        this.alumnos = new ArrayList<>();
+        this.alumnos = new ArrayList<Alumno>();
     }
 
     // Getters y Setters

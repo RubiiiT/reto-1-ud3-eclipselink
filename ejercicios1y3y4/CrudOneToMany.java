@@ -41,7 +41,11 @@ public class CrudOneToMany {
 
             Alumno alumno = new Alumno(idAlumno, NIF, nombre, apellido1, apellido2, email, direccion, codigoPostal, municipio, provincia, beca, profesor);
 
+            profesor.getAlumnos().add(alumno);
+            
             em.persist(alumno);
+            
+            em.merge(profesor);
             et.commit();
         } catch (Exception e) {
             if (et != null) {
